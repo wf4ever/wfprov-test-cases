@@ -1,0 +1,68 @@
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix prov: <http://www.w3.org/ns/prov#> .
+    @prefix wfprov: <http://purl.org/wf4ever/wfprov> .
+    @prefix wfdesc: <http://purl.org/wf4ever/wfdesc> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix scufl2: <http://ns.taverna.org.uk/2010/scufl2#> .
+    @prefix dct: <http://purl.org/dc/elements/1.1/> .
+    @prefix: <> .
+
+:activity rdf:type prov:Activity ;
+	prov:startedAtTime "2012-09-05T13:59:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>; 
+	prov:endedAtTime "2012-09-05T13:58:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+	prov:wasStartedBy	:entity ;
+	prov:qualifiedStart	[
+		rdf:type	prov:Start ;
+		prov:entity	:entity ;
+		prov:atTime	"2012-09-05T13:56:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	];
+	prov:qualifiedEnd	[
+		rdf:type	prov:End ;
+		prov:entity	:entity ;
+		prov:atTime	"2012-09-05T13:56:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	];
+	prov:wasEndedBy	:end1 ;	
+	prov:qualifiedUsage [
+		rdf:type	prov:Usage ;
+		prov:atTime	"2012-09-05T13:59:02.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+		prov:entity	:entity1 ;
+	];
+ .
+
+:activity rdf:type prov:Activity ;
+	prov:startedAtTime "2012-09-06T11:52:36.532+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	prov:endedAtTime "2012-09-06T11:51:36.532+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	prov:wasStartedBy	:start2 ;
+	prov:wasEndedBy	:end2 ;
+ .
+ 
+:entity	rdf:type	prov:Entity ;		
+	prov:wasGeneratedBy :activity ;
+	prov:generatedAtTime	"2012-09-05T13:59:00.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	prov:invalidatedAtTime	"2012-09-05T13:56:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	prov:wasInvalidatedBy [
+		a	prov:Activity; 
+		prov:startedAtTime "2012-09-05T13:56:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> 
+	] ;
+	prov:qualifiedUsage [
+		a	prov:Usage ;
+		prov:atTime	"2012-09-05T13:57:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	];	
+	prov:wasDerivedFrom :entity1 ;
+	prov:specializationOf	:entity1;	
+.
+	
+:entity1 rdf:type	prov:Entity ;
+	prov:generatedAtTime	"2012-09-05T13:59:00.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	prov:invalidatedAtTime	"2012-09-05T13:56:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+.	
+	
+:entity	rdf:type	prov:Entity ;			
+	prov:wasInvalidatedBy [
+		a	prov:Activity; 
+		prov:startedAtTime "2012-09-05T13:58:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+	] ;
+	prov:generatedAtTime	"2012-09-05T14:59:00.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	prov:invalidatedAtTime	"2012-09-05T14:56:04.254+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+.	

@@ -1,0 +1,55 @@
+......F..FFFF.F
+======================================================================
+FAIL: testNumberOfProcessRunsCount (testSingleRun.TestHelloAnyone.TestHelloAnyone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/testSingleRun/TestHelloAnyone.py", line 133, in testNumberOfProcessRunsCount
+    self.assertBindingCount(data, 2)
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/SparqlQueryTestCase.py", line 175, in assertBindingCount
+    self.assertEqual(bindings, count, "Expected %i result bindings, found %i"%(count, bindings))
+AssertionError: Expected 2 result bindings, found 3
+
+======================================================================
+FAIL: testSourceArtifactsOfWfOutputCount (testSingleRun.TestHelloAnyone.TestHelloAnyone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/testSingleRun/TestHelloAnyone.py", line 170, in testSourceArtifactsOfWfOutputCount
+    self.fail("Can't find a query to find IMMEDIATE source DATA contributing to a workflow output")
+AssertionError: Can't find a query to find IMMEDIATE source DATA contributing to a workflow output
+
+======================================================================
+FAIL: testSourceActivitiesOfWfOutputCount (testSingleRun.TestHelloAnyone.TestHelloAnyone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/testSingleRun/TestHelloAnyone.py", line 173, in testSourceActivitiesOfWfOutputCount
+    self.fail("Can't find a query to find IMMEDIATE source PROCESS RUNS contributing to a workflow output")
+AssertionError: Can't find a query to find IMMEDIATE source PROCESS RUNS contributing to a workflow output
+
+======================================================================
+FAIL: testAllSourceArtifactsOfWfOutputCount (testSingleRun.TestHelloAnyone.TestHelloAnyone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/testSingleRun/TestHelloAnyone.py", line 176, in testAllSourceArtifactsOfWfOutputCount
+    self.fail("Can't find a query to find ALL source DATA contributing to a workflow output")
+AssertionError: Can't find a query to find ALL source DATA contributing to a workflow output
+
+======================================================================
+FAIL: testAllSourceActivitiesOfWfOutputCount (testSingleRun.TestHelloAnyone.TestHelloAnyone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/testSingleRun/TestHelloAnyone.py", line 179, in testAllSourceActivitiesOfWfOutputCount
+    self.fail("Can't find a query to find ALL source PROCESS RUNS contributing to a workflow output")
+AssertionError: Can't find a query to find ALL source PROCESS RUNS contributing to a workflow output
+
+======================================================================
+FAIL: testInputsOfConcatenateCount (testSingleRun.TestHelloAnyone.TestHelloAnyone)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaoj/oxford/workspace/taverna_prov_tests/src/taverna/prov/tests/testSingleRun/TestHelloAnyone.py", line 201, in testInputsOfConcatenateCount
+    self.fail("Can't find a query to find all inputs to the concatenate processor run")
+AssertionError: Can't find a query to find all inputs to the concatenate processor run
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.534s
+
+FAILED (failures=6)
